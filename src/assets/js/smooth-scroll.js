@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-	const footerLinks = document.querySelectorAll('footer a[data-section]');
+	const smoothScrollLinks = document.querySelectorAll('a[data-section]');
 	
-	footerLinks.forEach(link => {
+	smoothScrollLinks.forEach(link => {
 		link.addEventListener('click', function(e) {
 			e.preventDefault();
 			
