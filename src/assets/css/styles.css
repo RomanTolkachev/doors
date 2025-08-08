@@ -1,6 +1,7 @@
 :root {
 	--color-white: #ffffff;
 	--color-blue: #2991FF;
+	--color-blue-hover: #1a7ae6;
 	--color-black: #1A1A1A;
 	--color-grey-0: #E4E4E4;
 	--color-grey-01: #F6F6FA;
@@ -12,6 +13,10 @@
 	
 	--font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 	--font-onest: 'Onest', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
@@ -74,7 +79,7 @@ a:hover {
 }
 
 img {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 }
 
@@ -355,7 +360,7 @@ nav[role="navigation"] {
 			box-sizing: border-box;
 
 			&:hover {
-				background: #1a7ae6;
+				background: var(--color-blue-hover);
 			}
 		}
 	}
@@ -484,4 +489,78 @@ nav[role="navigation"] {
 
 .portfolio .slick-dots li.slick-active button:before {
 	color: var(--color-blue);
+}
+
+footer {
+	background: var(--color-blue);
+	padding: 4.5rem 0;
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	nav[role="footer"] {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		height: 228px;
+		box-sizing: border-box;
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			padding: 0;
+			margin-bottom: 0;
+
+			li {
+				list-style: none;
+				
+				&:not(:last-child) {
+					margin-bottom: 12px;
+				}
+				
+				a {
+					color: var(--color-white);
+					font-family: var(--font-inter);
+					font-weight: 600;
+					font-size: 1.5rem;
+					line-height: 1.2;
+					letter-spacing: -0.04em;
+					position: relative;
+					text-decoration: none;
+					transition: color 0.3s ease;
+
+					&::after {
+						content: '';
+						position: absolute;
+						width: 0;
+						height: 2px;
+						bottom: -4px;
+						left: 0;
+						background-color: var(--color-white);
+						transition: width 0.3s ease;
+					}
+
+					&:hover {
+						color: var(--color-white);
+					}
+
+					&:hover::after {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		a {
+			color: var(--color-white);
+
+			&:hover {
+				scale: 1.02;
+				transition: scale 0.3s ease;
+			}
+		}
+	}
 }
