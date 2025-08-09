@@ -8,10 +8,11 @@
 			
 			<form class="contact-form">
 				<div class="form-row">
-					<input type="text" name="name" placeholder="Имя" required>
-					<input type="tel" name="phone" placeholder="+7 --- --- -- --" required>
+					<input type="text" name="name" placeholder="Имя" autocomplete="off" maxlength="20" required>
+					<input type="tel" name="phone" placeholder="+7 --- --- -- --" autocomplete="off" maxlength="12" required>
 					<button type="submit" class="btn-submit">отправить</button>
 				</div>
+				<div class="form-result"></div>
 			</form>
 		</div>
 	</div>
