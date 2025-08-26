@@ -11,8 +11,8 @@
 
 ## Требования
 
-- Node.js >= 18.0.0
-- npm >= 8.0.0
+- Node.js >= 22.0.0
+- npm >= 10.0.0
 
 ## Установка и запуск
 
@@ -61,7 +61,13 @@ npm run build
    ```
    TELEGRAM_BOT_TOKEN=your_bot_token
    TELEGRAM_CHAT_ID=your_chat_id
+   TELEGRAM_API=https://api.telegram.org/bot<YOUR_BOT_TOKEN>/sendMessage
    ```
+   
+   **Описание переменных:**
+   - `TELEGRAM_BOT_TOKEN` - токен вашего бота от @BotFather
+   - `TELEGRAM_CHAT_ID` - ID чата для получения сообщений
+   - `TELEGRAM_API` - URL API для отправки сообщений
 
 3. **Деплой произойдет автоматически** при каждом push в main ветку
 
