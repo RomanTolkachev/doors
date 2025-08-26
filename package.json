@@ -1,17 +1,22 @@
 {
   "name": "doors",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ремонт и реставрация дверей",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "eleventy",
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "start": "eleventy --serve"
   },
-  "keywords": [],
+  "keywords": ["doors", "repair", "restoration", "website"],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "3.1.2"
   }
 }

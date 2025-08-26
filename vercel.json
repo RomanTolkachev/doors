@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "eleventy",
+  "installCommand": "npm install",
+  "devCommand": "npm run dev"
+} 

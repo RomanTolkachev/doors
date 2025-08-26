@@ -1,4 +1,89 @@
-### Переменные для подключения telegram BOT.
-+ TELEGRAM_BOT_TOKEN
-+ TELEGRAM_CHAT_ID
-+ TELEGRAM_API
+# Сайт ремонта и реставрации дверей
+
+## Технологии
+
+- **Eleventy (11ty)** - статический генератор сайтов
+- **Nunjucks** - шаблонизатор
+- **CSS3** - стилизация
+- **JavaScript** - интерактивность
+- **Slick Slider** - карусель изображений
+- **Telegram Bot API** - обработка форм
+
+## Требования
+
+- Node.js >= 22.0.0
+- npm >= 10.0.0
+
+## Установка и запуск
+
+### Локальная разработка
+
+1. **Клонируйте репозиторий:**
+   ```bash
+   git clone <repository-url>
+   cd doors
+   ```
+
+2. **Установите зависимости:**
+   ```bash
+   npm install
+   ```
+
+3. **Запустите сервер разработки:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Откройте браузер:**
+   ```
+   http://localhost:8080
+   ```
+
+### Сборка для продакшена
+
+```bash
+npm run build
+```
+
+Собранные файлы будут находиться в папке `dist/`.
+
+## Деплой на Vercel
+
+### Автоматический деплой
+
+1. **Подключите репозиторий к Vercel:**
+   - Зайдите на [vercel.com](https://vercel.com)
+   - Нажмите "New Project"
+   - Выберите ваш GitHub репозиторий
+   - Vercel автоматически определит настройки для Eleventy
+
+2. **Настройте переменные окружения (опционально):**
+   ```
+   TELEGRAM_BOT_TOKEN=your_bot_token
+   TELEGRAM_CHAT_ID=your_chat_id
+   TELEGRAM_API=https://api.telegram.org/bot<YOUR_BOT_TOKEN>/sendMessage
+   ```
+   
+   **Описание переменных:**
+   - `TELEGRAM_BOT_TOKEN` - токен вашего бота от @BotFather
+   - `TELEGRAM_CHAT_ID` - ID чата для получения сообщений
+   - `TELEGRAM_API` - URL API для отправки сообщений
+
+3. **Деплой произойдет автоматически** при каждом push в main ветку
+
+### Ручной деплой
+
+1. **Установите Vercel CLI:**
+   ```bash
+   npm i -g vercel
+   ```
+
+2. **Войдите в аккаунт:**
+   ```bash
+   vercel login
+   ```
+
+3. **Деплой:**
+   ```bash
+   vercel
+   ```
