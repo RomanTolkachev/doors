@@ -642,13 +642,61 @@ footer {
 			font-weight: 600;
 			font-size: 1.25rem;
 			cursor: pointer;
-			transition: background-color 0.3s ease;
+			transition: all 0.3s ease;
 			text-transform: lowercase;
+			position: relative;
+			min-width: 140px;
 
 			&:hover {
 				background: var(--color-blue);
 				border: 1px solid var(--color-blue);
 			}
+
+			&:disabled {
+				opacity: 0.6;
+				cursor: not-allowed;
+			}
+
+			&.loading {
+				color: transparent;
+				
+				&::after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 20px;
+					height: 20px;
+					border: 2px solid transparent;
+					border-top: 2px solid var(--color-white);
+					border-radius: 50%;
+					animation: spin 1s linear infinite;
+				}
+			}
+		}
+
+		@keyframes spin {
+			0% { transform: translate(-50%, -50%) rotate(0deg); }
+			100% { transform: translate(-50%, -50%) rotate(360deg); }
+		}
+
+		.form-result {
+			margin-top: 1rem;
+			padding: 1rem;
+			border-radius: 0.5rem;
+			text-align: center;
+			font-family: var(--font-onest);
+			font-size: 1rem;
+			min-height: 3rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.form-result:not(:empty) {
+			background: var(--color-grey-01);
+			font-size: 1.25rem;
 		}
 	}
 }
